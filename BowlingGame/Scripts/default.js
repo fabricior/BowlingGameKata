@@ -15,7 +15,7 @@ Game.prototype.score = function () {
     var frameIndex = 0;
     for (var frame = 0; frame < 10; frame++) {
         if (this.isStrike(frameIndex)) {
-            scoreTotal = 10 + this.strikeBonus(frameIndex);
+            scoreTotal += 10 + this.strikeBonus(frameIndex);
             frameIndex++;
         }
         else if (this.isSpare(frameIndex)) { 

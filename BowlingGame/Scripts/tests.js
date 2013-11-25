@@ -51,3 +51,8 @@ test('Test One Strike', function() {
     rollMany(16, 0);
     equal(g.score(), 24);    
 });
+
+test('Test Perfect Game', function () {    
+    rollMany(12, 10);
+    equal(g.score(), 300);
+});
