@@ -16,6 +16,10 @@ function rollMany(n, pins) {
     }
 }
 
+function rollStrike() {
+    g.roll(10); 
+}
+
 function rollSpare() {
     g.roll(5);
     g.roll(5);
@@ -38,4 +42,12 @@ test('Test one spare', function () {
     g.roll(3);
     rollMany(17, 0);
     equal(g.score(), 16);
+});
+
+test('Test One Strike', function() {
+    rollStrike();
+    g.roll(3);
+    g.roll(4);
+    rollMany(16, 0);
+    equal(g.score(), 24);    
 });
